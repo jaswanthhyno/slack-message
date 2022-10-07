@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="bok()">hi hello
+
+    </h1>
+</body>
+</html>
+<script>
+    let url="https://hooks.slack.com/services/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"
+
+ 
+//xoxp-4031117581509-4046712325393-4188697324818-63ef57075f4144ac1dc68b78b563aa64
+  
+
+    const bok=()=>{
+        data = {
+        "name": "Jaswantha",
+        "email": "jaswa@gmailc.com",
+        "project": "Testing purpose"
+    }
+    fetch(url, {
+        method: 'POST', // or 'PUT'
+        headers: {
+           
+           "Authorization" :`Bearer xoxp-4031117581509-4046712325393-4188697324818-63ef57075f4144ac1dc68b78b563aa64`,
+            'Content-Type': 'application/json',
+          "access-control-allow-origin": "*",
+        },
+        body: JSON.stringify(data),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+        
+    }
+    
+    const channelId = "C12345";
+
+
+  
+   
+</script>
